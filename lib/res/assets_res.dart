@@ -8,5 +8,6 @@ class AssetsRes {
 
   static const String PLUGIN_NAME = 'module_10_assignment';
   static const String PLUGIN_VERSION = '1.0.0+1';
+  static const String ANIMATION = 'assets/animation.json';
   static const String LOGO = 'assets/logo.jpg';
 }

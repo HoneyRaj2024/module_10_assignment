@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:module_10_assignment/DetailsScreen.dart';
+import 'package:module_10_assignment/DetailsScreen/DetailsScreen.dart';
+import 'package:lottie/lottie.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -59,7 +60,14 @@ class _HomeScreenState extends State<HomeScreen> {
             future: _fetchDataFuture,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(child: CircularProgressIndicator());
+                return Center(
+                  child: Lottie.asset(
+                    'assets/animation.json', // Replace with your Lottie animation URL
+                    width: 100, // Adjust width as needed
+                    height: 100, // Adjust height as needed
+                    fit: BoxFit.cover, // Adjust fit as needed
+                  ),
+                );
               } else if (snapshot.hasError) {
                 return Center(child: Text('Error: ${snapshot.error}'));
               } else {

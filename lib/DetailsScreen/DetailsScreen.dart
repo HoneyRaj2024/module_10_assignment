@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:lottie/lottie.dart';
 
 class DetailsScreen extends StatefulWidget {
   final Map<String, dynamic> item;
 
-  const DetailsScreen({Key? key, required this.item}) : super(key: key);
+  const DetailsScreen({super.key, required this.item});
 
   @override
   _DetailsScreenState createState() => _DetailsScreenState();
@@ -159,7 +160,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         future: _fetchDataFuture,
                         builder: (context, snapshot) {
                           if (snapshot.connectionState == ConnectionState.waiting) {
-                            return const Center(child: CircularProgressIndicator());
+                            return Center(
+                              child: Lottie.asset(
+                                'assets/animation.json', // Replace with your Lottie animation URL
+                                width: 100, // Adjust width as needed
+                                height: 100, // Adjust height as needed
+                                fit: BoxFit.cover, // Adjust fit as needed
+                              ),
+                            );
                           } else if (snapshot.hasError) {
                             return Center(child: Text('Error: ${snapshot.error}'));
                           } else {
@@ -343,7 +351,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           future: _fetchDataFuture,
                           builder: (context, snapshot) {
                             if (snapshot.connectionState == ConnectionState.waiting) {
-                              return const Center(child: CircularProgressIndicator());
+                              return Center(
+                                child: Lottie.asset(
+                                  'assets/animation.json', // Replace with your Lottie animation URL
+                                  width: 100, // Adjust width as needed
+                                  height: 100, // Adjust height as needed
+                                  fit: BoxFit.cover, // Adjust fit as needed
+                                ),
+                              );
                             } else if (snapshot.hasError) {
                               return Center(child: Text('Error: ${snapshot.error}'));
                             } else {

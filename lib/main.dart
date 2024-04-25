@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:module_10_assignment/SplashScreen.dart';
-import 'HomeScreen.dart';
+import 'package:module_10_assignment/SplashScreen/SplashScreen.dart';
+import 'HomeScreen/HomeScreen.dart';
 
 void main() {
   runApp(const PhotoGallery());
