@@ -6,7 +6,24 @@ Module 10 Assignment
 
 This project is a starting point for a Flutter application.
 
-![Splash Screen](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/logo.jpg)
+Logo
+![Logo](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/logo.jpg)
+
+Splash Screen
+![Splash Screen](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/splashscreen.png)
+
+Home Screen
+![Splash Screen](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/home.png)
+
+Details Screen
+![Splash Screen](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/details.png)
+
+LandScape Screen
+![Splash Screen](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/dandscape.png)
+
+LandScape Details Screen
+![Splash Screen](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/detailslandscape.png)
+
 
 A few resources to get you started if this is your first Flutter project:
 
