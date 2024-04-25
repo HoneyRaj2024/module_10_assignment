@@ -83,56 +83,72 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemCount: data.length,
                   itemBuilder: (context, index) {
                     final item = data[index];
-                    return GestureDetector(
-                      onTap: () {
-                        // Navigate to details page
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetailsScreen(item: item),
-                          ),
-                        );
-                      },
-                      child: Material(
-                        elevation: 5, // Adjust the elevation as needed
-                        borderRadius: BorderRadius.circular(30.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30.0),
-                            image: DecorationImage(
-                              image: NetworkImage(item['image']),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          child: Align(
-                            alignment: Alignment.bottomLeft,
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 10, bottom: 10),
+                    return FutureBuilder(
+                      future: Future.delayed(const Duration(milliseconds: 300)), // Simulating loading delay
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState == ConnectionState.waiting) {
+                          return Center(
+                            child: Lottie.asset(
+                              'assets/animation.json', // Replace with your Lottie animation URL
+                              width: 100, // Adjust width as needed
+                              height: 100, // Adjust height as needed
+                              fit: BoxFit.cover, // Adjust fit as needed
+                            ), // You can replace this with any loading animation
+                          );
+                        } else {
+                          return GestureDetector(
+                            onTap: () {
+                              // Navigate to details page
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DetailsScreen(item: item),
+                                ),
+                              );
+                            },
+                            child: Material(
+                              elevation: 5, // Adjust the elevation as needed
+                              borderRadius: BorderRadius.circular(30.0),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [Colors.transparent, Colors.black.withOpacity(0.9)],
+                                  borderRadius: BorderRadius.circular(30.0),
+                                  image: DecorationImage(
+                                    image: NetworkImage(item['image']),
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    item['title'],
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20.0,
+                                child: Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 10, bottom: 10),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(30),
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                          colors: [Colors.transparent, Colors.black.withOpacity(0.9)],
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          item['title'],
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20.0,
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                        ),
-                      ),
+                          );
+                        }
+                      },
                     );
                   },
                 );
