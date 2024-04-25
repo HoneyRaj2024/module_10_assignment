@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:module_10_assignment/SplashScreen.dart';
-
 import 'HomeScreen.dart';
 
 void main() {
@@ -16,7 +14,7 @@ class PhotoGallery extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       title: 'Photo Gallery',
       theme: ThemeData(primarySwatch: Colors.blue,),
-      home: SplashScreen(),
+      home: const SplashScreen(),
       routes: {
         '/home': (context) => const HomeScreen(),
       },
