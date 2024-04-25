@@ -6,7 +6,7 @@ Module 10 Assignment
 
 This project is a starting point for a Flutter application.
 
-
+![Splash Screen](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/logo.jpg)
 
 A few resources to get you started if this is your first Flutter project:
 
