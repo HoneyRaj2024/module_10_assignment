@@ -17,14 +17,14 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 3), // Adjust duration as needed
+      duration: const Duration(seconds: 3),
     );
     _animation = CurvedAnimation(
       parent: _animationController,
       curve: Curves.easeInOut,
     );
 
-    // Start animation and navigate to home screen when animation completes
+    // Animation and navigate to home screen when animation completes
     _animationController.forward().then((_) {
       Navigator.of(context).pushReplacementNamed('/home');
     });
@@ -66,14 +66,14 @@ class _SplashScreenState extends State<SplashScreen>
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Your logo widget
+                    // Logo widget
                     Image.asset(
                       'assets/logo.jpg',
                       width: 250,
                       height: 250,
                     ),
                     const SizedBox(height: 20),
-                    // Your animated text widget
+                    // Animated text widget
                     Text(
                       'Photo Gallery',
                       style: TextStyle(

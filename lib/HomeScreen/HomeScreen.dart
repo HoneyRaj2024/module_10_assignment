@@ -90,10 +90,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           return Center(
                             child: Lottie.asset(
                               'assets/animation.json', // Replace with your Lottie animation URL
-                              width: 100, // Adjust width as needed
-                              height: 100, // Adjust height as needed
-                              fit: BoxFit.cover, // Adjust fit as needed
-                            ), // You can replace this with any loading animation
+                              width: 100, // Lottie Width
+                              height: 100, // Lottie height
+                              fit: BoxFit.cover,
+                            ),
                           );
                         } else {
                           return GestureDetector(
@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                             child: Material(
-                              elevation: 5, // Adjust the elevation as needed
+                              elevation: 5,
                               borderRadius: BorderRadius.circular(30.0),
                               child: Container(
                                 decoration: BoxDecoration(

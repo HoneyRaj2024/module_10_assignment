@@ -72,7 +72,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               icon: const Icon(Icons.more_vert),
               color: Colors.white,
               onPressed: () {
-                // Add your action here
+
               },
             ),
           ],
@@ -163,9 +163,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             return Center(
                               child: Lottie.asset(
                                 'assets/animation.json', // Replace with your Lottie animation URL
-                                width: 100, // Adjust width as needed
-                                height: 100, // Adjust height as needed
-                                fit: BoxFit.cover, // Adjust fit as needed
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
                               ),
                             );
                           } else if (snapshot.hasError) {
@@ -195,10 +195,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                     );
                                   },
                                   child: Material(
-                                    elevation: 5, // Adjust the elevation as needed
+                                    elevation: 5,
                                     borderRadius: BorderRadius.circular(30.0),
                                     child: Container(
-
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(30.0),
                                         image: DecorationImage(
@@ -283,7 +282,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               icon: const Icon(Icons.more_vert),
               color: Colors.white,
               onPressed: () {
-                // Add your action here
+
               },
             ),
           ],
@@ -354,9 +353,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               return Center(
                                 child: Lottie.asset(
                                   'assets/animation.json', // Replace with your Lottie animation URL
-                                  width: 100, // Adjust width as needed
-                                  height: 100, // Adjust height as needed
-                                  fit: BoxFit.cover, // Adjust fit as needed
+                                  width: 100,
+                                  height: 100,
+                                  fit: BoxFit.cover,
                                 ),
                               );
                             } else if (snapshot.hasError) {
@@ -385,7 +384,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                       );
                                     },
                                     child: Material(
-                                      elevation: 5, // Adjust the elevation as needed
+                                      elevation: 5,
                                       borderRadius: BorderRadius.circular(30.0),
                                       child: Container(
                                         decoration: BoxDecoration(
