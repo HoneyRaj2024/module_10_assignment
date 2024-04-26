@@ -7,7 +7,7 @@ Module 10 Assignment
 This project is a starting point for a Flutter application.
 
 ## Short Video
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=vt5fpE0bzSY)
+
 
 ## Logo
 ![Logo](https://github.com/HoneyRaj2024/module_10_assignment/blob/master/assets/logo.jpg)
